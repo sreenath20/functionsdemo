@@ -50,6 +50,18 @@ public class DemoFunctions { // static polymorphism by doing overloading
 		String [] names={"aa","bb","cc"};
 		String [] upperCaseNames=toUpper(names);
 		display(upperCaseNames);
+		allocateMem(10);
+	}
+
+	private static void allocateMem(int size) {
+		int [] intArray = new int[size];//@5000
+		
+		
+		// need more memory
+		int newIntArray []= new int[size+100];
+		intArray=new int[size+100];//@7000
+		
+		
 	}
 
 	private static void display(String[] upperCaseNames) {
