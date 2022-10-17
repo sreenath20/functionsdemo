@@ -75,6 +75,39 @@ public class EmployeeDriver {
 				System.out.println(emp);
 			}
 		}
+
+		System.out.println("Find emp by id =4");
+		System.out.println(getEmployeeById(4, employees));
+		System.out.println("Find emp by id =12");
+		System.out.println(getEmployeeById(12, employees));
+		System.out.println("Add new emp ");
+		System.out.println(addEmployee(new Employee(6, "name 6", 6000.0), employees));
+
+	}// end of main()
+
+	public static Employee getEmployeeById(Integer empId, Employee employees[]) {
+
+		Employee foundEmployee = null;
+		for (Employee currentEmp : employees) {
+			if (currentEmp != null && currentEmp.getId() == empId) {
+				foundEmployee = currentEmp;
+				break;
+			}
+		}
+		return foundEmployee;
+
+	}
+
+	public static Employee addEmployee(Employee newEmployee, Employee employees[]) {
+
+		for (Integer index = 0; index < employees.length; index++) {
+			if (employees[index] == null) {
+				employees[index] = newEmployee;
+				return newEmployee;
+			}
+
+		}
+		return null;
 	}
 
 }

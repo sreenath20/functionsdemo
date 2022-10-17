@@ -4,16 +4,20 @@ package ford.b2.oops;
 public class Employee { // POJO class :Plain old java object
 	
 	// Data members / attributes / instance data members
-	private Integer id;
+	private Integer id=100;
 	private String name;
 	private Double salary;
 	
 	//member methods
 	public Employee() { // default constructor
-		
+//		this.id=0;
+//		this.name="";
+//		this.salary=0.0;
 	}
 	
 	public Employee(Integer id,String name,Double salary) { // parameterized constructor
+	//validate?
+		
 		this.id=id;
 		this.name=name;
 		this.salary=salary;
