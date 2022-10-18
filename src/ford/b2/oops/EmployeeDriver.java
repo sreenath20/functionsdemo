@@ -4,6 +4,9 @@ public class EmployeeDriver {
 
 	public static void main(String[] args) {
 
+		Long longData = 100000L;
+		Long longData2 = 100000l;
+		
 		Integer data;
 		// System.out.println(data);
 		Employee employee = new Employee();

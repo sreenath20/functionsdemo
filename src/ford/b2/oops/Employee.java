@@ -22,6 +22,11 @@ public class Employee { // POJO class :Plain old java object
 		this.name=name;
 		this.salary=salary;
 	}
+
+	public void newFun() {
+		System.out.println("new functionality!");
+	}
+
 	// getters & setters
 	public void setId(Integer id) {
 		this.id=id;
