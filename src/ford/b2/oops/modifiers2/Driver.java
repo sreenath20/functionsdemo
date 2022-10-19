@@ -8,8 +8,8 @@ public class Driver {
 	
 		final Double pi= 3.14;
 		//pi=5.5;
-		final A a;//=new A();/@2000
-		a= new A(100);
+		final A a=new A();//@2000
+		//a= new A(100);
 		//a=new A();
 		a.name="my name";
 		a.name="your name";
