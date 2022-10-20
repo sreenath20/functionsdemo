@@ -6,11 +6,16 @@ public class Driver {
 
 		Account account = new Account(100.0);
 		try {
-			account.withdraw(150.0);
+			
+				account.withdraw(150.0);
+			
 		} catch (AccountException e) {
 			// TODO Auto-generated catch block
 			//e.printStackTrace();
 			System.out.println(e.getMessage());
+		}catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 
 		System.out.println("End of app.");

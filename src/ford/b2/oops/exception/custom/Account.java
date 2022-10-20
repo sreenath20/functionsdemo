@@ -7,14 +7,19 @@ public class Account {
 		this.balance=balance;
 	}
 	
-	public Double withdraw(Double amount)throws AccountException {
+	public Double withdraw(Double amount) throws AccountException,Exception {
 		if(amount<=this.balance) {
 			this.balance-=amount;
 		}
 		else
 		{
-			throw new AccountException("You have insuffient balance:"+this.balance);
-			//System.out.println("Insufficent Balance");
+			throw new AccountException("You have insuffient balance:" + this.balance);
+
+//			try {
+//				throw new AccountException("You have insuffient balance:" + this.balance);
+//			} catch (AccountException e) {
+//				// System.out.println("Insufficent Balance");
+//			}
 		}
 		return this.balance;
 	}
