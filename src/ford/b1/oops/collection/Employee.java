@@ -1,5 +1,7 @@
 package ford.b1.oops.collection;
 
+import java.util.Objects;
+
 // data type / custom defined data type [developer] / user defined
 public class Employee {  // POJO class : plain old java objects
 
@@ -41,6 +43,26 @@ public class Employee {  // POJO class : plain old java objects
 	public void setSalary(Double salary) {
 		this.salary = salary;
 	}
+	
+	
+	// to check equality of two employee objects
+	@Override
+	public int hashCode() {
+		return Objects.hash(id);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (this.getClass() != obj.getClass())
+			return false;
+		Employee other = (Employee) obj;
+		return Objects.equals(id, other.id);
+	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
