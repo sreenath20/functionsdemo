@@ -94,6 +94,38 @@ public class CollectionDriver {
 		Collections.sort(intList2);
 		System.out.println("after sort:"+intList2);
 		
+		List<String> stringList=new ArrayList<>();
+		List<Double> doubleList=new ArrayList<>();
+		// list of user defined data
+		List<Employee> employeeList = new ArrayList<>();
+		employeeList.add(new Employee(1, "n1", 100.0));
+		employeeList.add(new Employee(5, "n5", 500.0));
+		System.out.println(employeeList);
+		System.out.println("emp at index 1:"+employeeList.get(1));
+		employeeList.add(1,new Employee(3, "n3", 300.0));
+		System.out.println(employeeList);
+		employeeList.set(0, new Employee(11, "n11", 1100.0));
+		System.out.println(employeeList);
+		//update id 3 name = "new name"
+		for(Employee emp:employeeList) {
+			if(emp.getId()==3) {
+				emp.setName("new name");
+				break;
+			}
+		}
+		System.out.println(employeeList);
+		employeeList.remove(1);
+		System.out.println(employeeList);
+		
+		Employee findEmp = new Employee(5, "n5", 500.0);
+		employeeList.add(new Employee(2, "n2", 200.0));
+		System.out.println(employeeList);
+		System.out.println("emp id 11 found :"+employeeList.indexOf(findEmp));
+		employeeList.remove(findEmp);
+		System.out.println(employeeList);
+		//Collections.sort(employeeList);
+		
+		
 	}
 
 }
