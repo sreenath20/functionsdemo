@@ -34,7 +34,25 @@ public class MapDriver {
 		System.out.println("contains key 55:"+nameNamp.containsKey(55));
 		// Update
 		nameNamp.put(56, "kk");
+		nameNamp.replace(55, "kk");
 		System.out.println(nameNamp);
+		//delete
+		nameNamp.remove(-9);
+		System.out.println(nameNamp);
+		// C
+		Map<Integer,Employee> empMap = new HashMap<>();
+		empMap.put(1, new Employee(1, "n1", 100.0));
+		empMap.put(2, new Employee(2, "n2", 200.0));
+		empMap.put(5, new Employee(5, "n2", 500.0));
+		System.out.println(empMap);
+		//R
+		System.out.println(empMap.get(5));
+		//update
+		System.out.println(empMap.replace(5,  new Employee(5, "new 5", 550.0)));
+		System.out.println(empMap);
+		//D
+		empMap.remove(5);
+		System.out.println(empMap);
 	}
 
 }
