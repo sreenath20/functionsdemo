@@ -31,6 +31,10 @@ public class Driver {
 		System.out.println("Emp by salary:");
 		System.out.println(empList);
 		
+		empList.sort(new EmployeeSalaryComparator());
+		System.out.println("Emp by salary:");
+		System.out.println(empList);
+		
 		//Task to create comparator with parameters to sort.
 		
 		empList.sort(new EmployeeComparator(2));
@@ -52,9 +56,11 @@ public class Driver {
 		System.out.println("New emp list from Map");
 		empMap.put(6, new Employee(6, "ÿy", 550.0));
 		Collection<Employee> newEmpList = empMap.values();
-		System.out.println(newEmpList);
-		
-		
+		System.out.println(newEmpList);	
+		// sorting in descending order
+		System.out.println("Emp by sal in Desc order");
+		Collections.sort(empList, Collections.reverseOrder(new EmployeeSalaryComparator()));
+		System.out.println(empList);
 	}
 
 }
