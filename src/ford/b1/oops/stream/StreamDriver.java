@@ -59,11 +59,12 @@ public class StreamDriver {
 
 		List<Employee> sortedEmpListByname = empList.stream().sorted((e1, e2) -> e1.getName().compareTo(e2.getName()))
 				.collect(Collectors.toList());
+		System.out.println("Sorted emp list by name:" + sortedEmpListByname);
 		
 		// sort emp by Date of joining.
 		System.out.println("Emp list by DOJ:");
 		empList.stream().sorted((e1,e2)->e1.getDoj().compareTo(e2.getDoj())).forEach((e) -> System.out.println(e));
-		System.out.println("Sorted emp list by name:" + sortedEmpListByname);
+	
 		// get list of emp getting sal more than 25000.
 		Long count = empList.stream().filter((e)->e.getSalary()>25000).count();
 		System.out.println("count of emp having sal > 25K:"+count);

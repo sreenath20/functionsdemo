@@ -1,5 +1,7 @@
 package ford.b2.oops.lambda;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
@@ -53,6 +55,22 @@ public class LambdaDriver {
 		Predicate<Employee> checkSalary = (e)->e.getSalary()>1000.0;
 		System.out.println("is emp sal > 1000?:"+checkSalary.test(new Employee(1, "AA", 500.0)));
 		
+		List<Employee> empList = new ArrayList<>();
+		empList.add(new Employee(5, "DD", 5000.0));
+		empList.add(new Employee(1, "FF", 3000.0));
+		empList.add(new Employee(7, "JJ", 1000.0));
+		empList.add(new Employee(3, "EE", 2000.0));
+		
+		Function<List<Employee>,List<Employee>> hikeAllEmployeeSalary = (emps)->{
+			
+			for(Employee emp:emps) {
+				emp.setSalary(emp.getSalary()*1.1);
+			}
+			
+			return emps;
+		};
+		
+		System.out.println(hikeAllEmployeeSalary.apply(empList));
 		
 	}
 
