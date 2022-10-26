@@ -1,5 +1,6 @@
 package ford.b1.oops.stream;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -33,13 +34,45 @@ public class StreamDriver {
 
 		// to find lenth of each name and sum it
 		Optional<Integer> optTotalLength = namesList.stream().map((name) -> name.length()).reduce((a, b) -> a + b);
-		if(optTotalLength.isPresent())
+		if (optTotalLength.isPresent())
 			System.out.println(optTotalLength.get());
-		
+
 		// print all e names in sorted order.
-		namesList.stream().sorted((n1,n2)->n1.compareTo(n2)).forEach((n) -> System.out.println(n));
+		namesList.stream().sorted((n1, n2) -> n1.compareTo(n2)).forEach((n) -> System.out.println(n));
 		System.out.println(namesList);
 
+		//
+		List<Employee> empList = new ArrayList<>();
+
+		empList.add(new Employee(1, "Abhijith", 30000.0,LocalDate.of(2022, 1, 1)));
+		empList.add(new Employee(5, "Hari", 15000.0,LocalDate.of(2020, 5, 8)));
+		empList.add(new Employee(2, "Akshat", 50000.0,LocalDate.of(2020, 5, 14)));
+		empList.add(new Employee(3, "Pavan", 20000.0,LocalDate.of(2010, 2, 22)));
+		System.out.println(empList);
+		// print all emp names?
+		empList.stream().map((e) -> e.getName()).forEach((n) -> System.out.println(n));
+		// sort the emap by id
+		empList.stream().sorted().forEach((e) -> System.out.println(e));
+		List<Employee> sortedEmpList = empList.stream().sorted().collect(Collectors.toList());
+		System.out.println("Sorted emp list:" + sortedEmpList);
+		// sort the emap by name
+
+		List<Employee> sortedEmpListByname = empList.stream().sorted((e1, e2) -> e1.getName().compareTo(e2.getName()))
+				.collect(Collectors.toList());
+		
+		// sort emp by Date of joining.
+		System.out.println("Emp list by DOJ:");
+		empList.stream().sorted((e1,e2)->e1.getDoj().compareTo(e2.getDoj())).forEach((e) -> System.out.println(e));
+		System.out.println("Sorted emp list by name:" + sortedEmpListByname);
+		// get list of emp getting sal more than 25000.
+		Long count = empList.stream().filter((e)->e.getSalary()>25000).count();
+		System.out.println("count of emp having sal > 25K:"+count);
+		
+		List<Employee> empSalaryList = empList.stream().filter((e)->e.getSalary()>25000).collect(Collectors.toList());
+		System.out.println("Emp having sal > 25k:"+empSalaryList);
+		System.out.println("count of emp having sal > 25K:"+empSalaryList.size());
+		
+		System.out.println("Unchanged emp source:" + empList);
 	}
 
 }
