@@ -8,7 +8,7 @@ import java.util.function.Supplier;
 public class LambdaDriver {
 
 	public static void main(String[] args) {
-
+		
 		Demo demo = (n) -> n * n;
 
 		System.out.println(demo.fun(5));
@@ -52,6 +52,7 @@ public class LambdaDriver {
 		// write a predicate to check salary > 1000/-
 		Predicate<Employee> checkSalary = (e)->e.getSalary()>1000.0;
 		System.out.println("is emp sal > 1000?:"+checkSalary.test(new Employee(1, "AA", 500.0)));
+		
 		
 	}
 
