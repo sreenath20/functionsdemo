@@ -1,11 +1,10 @@
 package ford.b2.oops.stream;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
-import ford.b2.oops.lambda.Employee;
 
 public class StreamDriver {
 
@@ -40,36 +39,49 @@ public class StreamDriver {
 		nameList.stream().sorted().forEach((n) -> System.out.println(n));
 
 		List<Employee> empList = new ArrayList<>();
-		empList.add(new Employee(5, "DD", 5000.0));
-		empList.add(new Employee(1, "FF", 3000.0));
-		empList.add(new Employee(7, "JJ", 1000.0));
-		empList.add(new Employee(3, "EE", 2000.0));
-		System.out.println("emp data source:"+empList);
+		empList.add(new Employee(5, "DD", 50000.0,LocalDate.of(2000, 5, 1)));
+		empList.add(new Employee(1, "FF", 30000.0,LocalDate.of(2008, 5, 10)));
+		empList.add(new Employee(7, "JJ", 10000.0,LocalDate.of(2008, 5, 15)));
+		empList.add(new Employee(3, "EE", 20000.0,LocalDate.of(2022, 5, 25)));
+		empList.add(new Employee(22, "ZZ", 70000.0,LocalDate.of(2022, 10, 17)));
+		System.out.println("emp data source:" + empList);
 		// increase emp by 10%
 		List<Employee> salaryHikedEmployees = empList.stream().map((e) -> {
-			e.setSalary(e.getSalary() * 1.1);
-			return e;
+			// create a copy of emp to manipulate to avoid changes to underlying data
+			// structure
+			Employee newEmp = new Employee(e);// using copy constructor
+
+			newEmp.setSalary(newEmp.getSalary() * 1.1);
+
+			return newEmp;
 		}
 
 		).collect(Collectors.toList());
-		
-		System.out.println("Salary Hiked emps:"+salaryHikedEmployees);
-		System.out.println("emp data source:"+empList);
+
+		System.out.println("Salary Hiked emps:" + salaryHikedEmployees);
+		System.out.println("emp data source:" + empList);
 		// Find the sum of all salaries?
-		Optional<Double> optSalarySum = empList.stream().map((e)->e.getSalary()).reduce((s1,s2)->s1+s2);
-		if(optSalarySum.isPresent())System.out.println("Total sal="+optSalarySum.get());
-		//sort emp by name
-		empList.stream().sorted().forEach((e)->System.out.println(e));
+		Optional<Double> optSalarySum = empList.stream().map((e) -> e.getSalary()).reduce((s1, s2) -> s1 + s2);
+		if (optSalarySum.isPresent())
+			System.out.println("Total sal=" + optSalarySum.get());
+		// sort emp by name
+		empList.stream().sorted().forEach((e) -> System.out.println(e));
 		System.out.println(empList);
-		//sort emp by salary
-		empList.stream().sorted((e1,e2)->e1.getSalary().compareTo(e2.getSalary())).forEach((e)->System.out.println(e));
-		//limit
+		// sort emp by salary
+		empList.stream().sorted((e1, e2) -> e1.getSalary().compareTo(e2.getSalary()))
+				.forEach((e) -> System.out.println(e));
+		// limit
 		System.out.println("limit 2 emps:");
-		empList.stream().limit(2).forEach((e)->System.out.println(e));
-		//skip
+		empList.stream().limit(2).forEach((e) -> System.out.println(e));
+		// skip
 		System.out.println("skip first 2 emps:");
-		empList.stream().skip(2).forEach((e)->System.out.println(e));
+		empList.stream().skip(2).forEach((e) -> System.out.println(e));
 		
+		// get emps getting sal > 25k
+		System.out.println("emps having sal > 25k");
+		empList.stream().filter((e)->e.getSalary()>25000.0).forEach(System.out::println);// method reference e.g (e) -> System.out.println(e)
+		empList.stream().map(Employee::fetchSal).forEach(System.out::println);		
+
 	}
 
 }

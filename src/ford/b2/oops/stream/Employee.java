@@ -1,5 +1,6 @@
 package ford.b2.oops.stream;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 // User defined data type?
@@ -9,12 +10,17 @@ public class Employee implements Comparable<Employee> { // POJO class :Plain old
 	private Integer id;
 	private String name;
 	private Double salary;
+	private LocalDate doj;
 
 	// member methods
 	public Employee() { // default constructor
 //		this.id=0;
 //		this.name="";
 //		this.salary=0.0;
+	}
+	
+	public static Double fetchSal(Employee e) {
+		return e.getSalary();
 	}
 
 	public Employee(Integer id, String name, Double salary) { // parameterized constructor
@@ -23,6 +29,22 @@ public class Employee implements Comparable<Employee> { // POJO class :Plain old
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
+	}
+
+	public Employee(Integer id, String name, Double salary, LocalDate doj) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+		this.doj = doj;
+	}
+
+// copy constructor
+	public Employee(Employee emp) {
+		super();
+		this.id = emp.id;
+		this.name = emp.name;
+		this.salary = emp.salary;
 	}
 
 	public void newFun() {
@@ -60,7 +82,7 @@ public class Employee implements Comparable<Employee> { // POJO class :Plain old
 
 	@Override
 	public String toString() {
-		return "Employee [id=" + this.id + ", name=" + name + ", salary=" + salary + "]";
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + ", doj=" + doj + "]";
 	}
 
 	// check equality of 2 employee objects.
