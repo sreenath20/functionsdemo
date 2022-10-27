@@ -1,0 +1,23 @@
+
+Task:
+Create Lambda to 
+1) find cube of a nuber [function]
+2) find the length of a string [function]
+3) get uppercase / lowercase of a string [function]
+4) find give number is prime or not [predicate]
+5) find if employee salary is greter than 25000.[hint: predicate]
+6) Find employee with min / max salary [firt sort, then return first object in the list].
+7. Write a lambda function to hike the salary of all employees by 10%.
+
+
+Stream API:
+List of Employees: {id,name,salary,DOJ,DOB,address}
+Manager questions on the list:
+1. How many are geting salary > 25000.
+2. Who are joined the company this year[get the current year from LocalDate.now()].
+3. Who is younger / older employee by age?
+4. Who is senior / junior in the company.
+5. Who are all working in the company since last 5 years?
+6. List all employees who joined on Monday?
+
+
