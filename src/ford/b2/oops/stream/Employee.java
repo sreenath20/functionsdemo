@@ -79,6 +79,15 @@ public class Employee implements Comparable<Employee> { // POJO class :Plain old
 	public void setSalary(Integer salary) {
 		this.salary = salary.doubleValue();
 	}
+	
+
+	public LocalDate getDoj() {
+		return doj;
+	}
+
+	public void setDoj(LocalDate doj) {
+		this.doj = doj;
+	}
 
 	@Override
 	public String toString() {

@@ -39,11 +39,13 @@ public class StreamDriver {
 		nameList.stream().sorted().forEach((n) -> System.out.println(n));
 
 		List<Employee> empList = new ArrayList<>();
-		empList.add(new Employee(5, "DD", 50000.0,LocalDate.of(2000, 5, 1)));
-		empList.add(new Employee(1, "FF", 30000.0,LocalDate.of(2008, 5, 10)));
-		empList.add(new Employee(7, "JJ", 10000.0,LocalDate.of(2008, 5, 15)));
-		empList.add(new Employee(3, "EE", 20000.0,LocalDate.of(2022, 5, 25)));
-		empList.add(new Employee(22, "ZZ", 70000.0,LocalDate.of(2022, 10, 17)));
+		
+		empList.add(new Employee(1, "FF", 30000.0, LocalDate.of(2008, 5, 10)));
+		empList.add(new Employee(22, "ZZ", 70000.0, LocalDate.of(2022, 10, 17)));
+		empList.add(new Employee(7, "JJ", 10000.0, LocalDate.of(2008, 5, 15)));
+		empList.add(new Employee(3, "EE", 20000.0, LocalDate.of(2022, 5, 25)));
+		empList.add(new Employee(5, "DD", 50000.0, LocalDate.of(2000, 5, 1)));
+
 		System.out.println("emp data source:" + empList);
 		// increase emp by 10%
 		List<Employee> salaryHikedEmployees = empList.stream().map((e) -> {
@@ -76,12 +78,40 @@ public class StreamDriver {
 		// skip
 		System.out.println("skip first 2 emps:");
 		empList.stream().skip(2).forEach((e) -> System.out.println(e));
-		
+
 		// get emps getting sal > 25k
 		System.out.println("emps having sal > 25k");
-		empList.stream().filter((e)->e.getSalary()>25000.0).forEach(System.out::println);// method reference e.g (e) -> System.out.println(e)
-		empList.stream().map(Employee::fetchSal).forEach(System.out::println);		
+		empList.stream().filter((e) -> e.getSalary() > 25000.0).forEach(System.out::println);// method reference e.g (e)
+																								// ->
+																								// System.out.println(e)
+		empList.stream().map(Employee::fetchSal).forEach(System.out::println);
 
+		// display / retrieve all emps who have joined company in the current year.
+		System.out.println("Current year emp list:");
+		LocalDate today = LocalDate.now();
+		int currentYear = today.getYear();
+		// empList.stream().filter((e)->e.getDoj().getYear()==currentYear).forEach(System.out::println);
+		empList.stream().filter((e) -> e.getDoj().getYear() == LocalDate.now().getYear()).forEach(System.out::println);
+		// Find 2 seniors in my company
+		System.out.println("2 most seniors in the company:");
+		int limitSize=2;
+		empList.stream().sorted((e1, e2) -> e1.getDoj().compareTo(e2.getDoj())).limit(limitSize).forEach(System.out::println);
+	
+		System.out.println("2 most juniors in the company:");
+		//int limitSize=2;
+		empList.stream().sorted((e1, e2) -> e2.getDoj().compareTo(e1.getDoj())).limit(limitSize).forEach(System.out::println);
+	
+		System.out.println("name list sizes:"+lengthList);
+		Optional<Integer> optMin = lengthList.stream().min((n1,n2)->n1.compareTo(n2));
+		if(optMin.isPresent())System.out.println("Min size:"+optMin.get());
+		// find the average sal of all emps?
+		Optional<Double> optTotalSal =  empList.stream().map((e)->e.getSalary()).reduce((o1,o2)->o1+o2);
+		if(optTotalSal.isPresent()) {
+			System.out.println("Avg sal:"+optTotalSal.get()/empList.size());
+		}else
+		{
+			
+		}
 	}
 
 }
