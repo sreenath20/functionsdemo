@@ -3,3 +3,10 @@ https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/stream/pa
 https://www.oracle.com/technical-resources/articles/java/ma14-java-se-8-streams.html
 LocalDate:
 https://docs.oracle.com/en/java/javase/12/docs/api/java.base/java/time/LocalDate.html
+
+Generics:
+
+https://docs.oracle.com/javase/tutorial/java/generics/types.html
+https://docs.oracle.com/javase/tutorial/extra/generics/methods.html
+https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html
+https://www.oracle.com/technical-resources/articles/java/juneau-generics.html

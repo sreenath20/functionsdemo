@@ -20,4 +20,5 @@ Manager questions on the list:
 5. Who are all working in the company since last 5 years?
 6. List all employees who joined on Monday?
 
-
+Generics:
+1. Create a generic method to display 
