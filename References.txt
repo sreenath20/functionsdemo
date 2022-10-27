@@ -10,3 +10,10 @@ https://docs.oracle.com/javase/tutorial/java/generics/types.html
 https://docs.oracle.com/javase/tutorial/extra/generics/methods.html
 https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html
 https://www.oracle.com/technical-resources/articles/java/juneau-generics.html
+
+
+Reflections:
+https://docs.oracle.com/javase/tutorial/reflect/index.html
+https://www.oracle.com/technical-resources/articles/java/javareflection.html
+https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/package-summary.html
+

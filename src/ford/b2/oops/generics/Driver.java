@@ -3,6 +3,7 @@ package ford.b2.oops.generics;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Driver {
 
@@ -51,6 +52,8 @@ public class Driver {
 		DemoGeneric.display2(new ArrayList<B>());
 		DemoGeneric.display2(new ArrayList<A>());
 		//DemoGeneric.display2(new ArrayList<C>());//coz its a child of B
+		
+		Optional<>
 	}
 
 }
