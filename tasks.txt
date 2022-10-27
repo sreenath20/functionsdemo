@@ -21,4 +21,6 @@ Manager questions on the list:
 6. List all employees who joined on Monday?
 
 Generics:
-1. Create a generic method to display 
+1. Create a generic method to display list of any wrapper class / user defined data type.
+2. Create a generic Calculator class to handle Number [Integer/Float/Double etc] data type
+3. 

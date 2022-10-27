@@ -53,7 +53,6 @@ public class Driver {
 		DemoGeneric.display2(new ArrayList<A>());
 		//DemoGeneric.display2(new ArrayList<C>());//coz its a child of B
 		
-		Optional<>
 	}
 
 }
