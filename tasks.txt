@@ -23,4 +23,4 @@ Manager questions on the list:
 Generics:
 1. Create a generic method to display list of any wrapper class / user defined data type.
 2. Create a generic Calculator class to handle Number [Integer/Float/Double etc] data type
-3. 
+3. Create a generic Payment class to to handle generic payment types by user such as [CreditCard / DebitCard / CashOnDelivery ] data type
