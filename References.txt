@@ -16,4 +16,9 @@ Reflections:
 https://docs.oracle.com/javase/tutorial/reflect/index.html
 https://www.oracle.com/technical-resources/articles/java/javareflection.html
 https://docs.oracle.com/javase/8/docs/api/java/lang/reflect/package-summary.html
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html
 
+
+JDBC 4:
+https://en.wikipedia.org/wiki/JDBC_driver
+https://docs.oracle.com/cd/E11882_01/java.112/e16548/toc.htm
