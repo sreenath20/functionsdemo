@@ -4,6 +4,7 @@ public class Employee {
 	Integer id;
 	String name;
 	Address address; // has a relation ship
+	
 	public Employee() {
 		super();
 	}

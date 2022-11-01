@@ -1,0 +1,85 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(¶ÀÅæ
+m
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 30 to the 15 allowed.(åÜµ„ûÿÿÿÿ
+[
+java:S1854‡"DRemove this useless assignment to local variable "integerSizeArray".(›½é§
+W
+java:S1854†"@Remove this useless assignment to local variable "intSizeArray".(ÚÁõ
+S
+java:S1854"<Remove this useless assignment to local variable "intArray".(êï®Å
+O
+java:S1854™"8Remove this useless assignment to local variable "data".(¸—”Ì
+c
+java:S1854•"GRemove this useless assignment to local variable "employeeNamesbySize".(…óì’üÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(«Ô®İ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÔèÆñ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(«‹Îõ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(å™¥áøÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(•¼î—
+S	java:S106"9Replace this use of System.out or System.err by a logger.(—äùŒùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(åÙ®“ùÿÿÿÿ
+f
+java:S1764"KCorrect one of the identical sub-expressions on both sides of operator "!="(åÙ®“ùÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(·ùßóıÿÿÿÿ
+S	java:S106 "9Replace this use of System.out or System.err by a logger.(¯÷íÓıÿÿÿÿ
+f
+java:S1764 "KCorrect one of the identical sub-expressions on both sides of operator "=="(¯÷íÓıÿÿÿÿ
+S	java:S106!"9Replace this use of System.out or System.err by a logger.(©¨ÑÈùÿÿÿÿ
+S	java:S106%"9Replace this use of System.out or System.err by a logger.(®ıáëûÿÿÿÿ
+N	java:S106)"9Replace this use of System.out or System.err by a logger.(³Ù¢ö
+S	java:S106+"9Replace this use of System.out or System.err by a logger.(´©‡Ñıÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(ÁİÖËşÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(â†şËøÿÿÿÿ
+N	java:S1061"9Replace this use of System.out or System.err by a logger.(‰éŞ¯
+S	java:S1068"9Replace this use of System.out or System.err by a logger.(ÙÊ«ôûÿÿÿÿ
+Q	java:S125<"<This block of commented-out lines of code should be removed.(ß™¤
+N	java:S106J"9Replace this use of System.out or System.err by a logger.(‡•Ù¯
+<	java:S131K""Add a default case to this switch.(Ìå™Óøÿÿÿÿ
+N	java:S106M"9Replace this use of System.out or System.err by a logger.(«ï«›
+N	java:S106P"9Replace this use of System.out or System.err by a logger.(ÉØ²
+S	java:S106V"9Replace this use of System.out or System.err by a logger.(ÖÖ£ıÿÿÿÿ
+N	java:S106Y"9Replace this use of System.out or System.err by a logger.(°”ò“
+N	java:S106\"9Replace this use of System.out or System.err by a logger.(šò“Ü
+S	java:S106b"9Replace this use of System.out or System.err by a logger.(Èá·şıÿÿÿÿ
+N	java:S106j"9Replace this use of System.out or System.err by a logger.(Ç²Ñ×
+V	java:S125k"<This block of commented-out lines of code should be removed.(Ë›¶‚üÿÿÿÿ
+N	java:S106q"9Replace this use of System.out or System.err by a logger.(ÃÜ‹í
+N	java:S106w"9Replace this use of System.out or System.err by a logger.(ó™ÄÍ
+N	java:S106|"9Replace this use of System.out or System.err by a logger.(°©Òİ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(á®Û©
+D
+java:S1481"-Remove this unused "intArray" local variable.(êï®Å
+F
+java:S1197ƒ"*Move the array designators [] to the type.(ÆåóËùÿÿÿÿ
+H
+java:S1481†"1Remove this unused "intSizeArray" local variable.(ÚÁõ
+L
+java:S1481‡"5Remove this unused "integerSizeArray" local variable.(›½é§
+T	java:S106‰"9Replace this use of System.out or System.err by a logger.(úÃÑËøÿÿÿÿ
+T	java:S106‹"9Replace this use of System.out or System.err by a logger.(¡‰”Æıÿÿÿÿ
+O	java:S106"9Replace this use of System.out or System.err by a logger.(õ‡•
+A
+java:S1197"*Move the array designators [] to the type.(—­œÌ
+T	java:S106"9Replace this use of System.out or System.err by a logger.(ŒÔÊçıÿÿÿÿ
+F
+java:S1197’"*Move the array designators [] to the type.(ğ÷Šøÿÿÿÿ
+O	java:S106”"9Replace this use of System.out or System.err by a logger.(“ºš³
+F
+java:S1197•"*Move the array designators [] to the type.(…óì’üÿÿÿÿ
+T
+java:S1481•"8Remove this unused "employeeNamesbySize" local variable.(…óì’üÿÿÿÿ
+O	java:S106–"9Replace this use of System.out or System.err by a logger.(ß»Ù¤
+T	java:S106—"9Replace this use of System.out or System.err by a logger.(õ¹åÓıÿÿÿÿ
+T	java:S106˜"9Replace this use of System.out or System.err by a logger.(©«…•ûÿÿÿÿ
+@
+java:S1481™")Remove this unused "data" local variable.(¸—”Ì
+E
+java:S10667"/Merge this if statement with the enclosing one.(ÓÆì»
+f
+java:S1301K"KReplace this "switch" statement by "if" statements to increase readability.(Ìå™Óøÿÿÿÿ
+E
+java:S54115"*Use the primitive boolean expression here.(Ù…ÎÃşÿÿÿÿ
+@
+java:S54117"*Use the primitive boolean expression here.(ÓÆì»
